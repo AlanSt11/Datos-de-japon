@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,700&family=Poppins:ital,wght@0,300;1,100;1,200&family=Roboto:wght@400;700&family=Zen+Kaku+Gothic+Antique:wght@400;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    background-color: #ededed;
+    font-size: 18px;
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+    background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #FF0000;
+    border-radius: 10px;
+}
+
+/*Portada*/
+.portada-slider{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 51px;
+}
+
+.portada-slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slider 15s infinite alternate ease-in-out;
+}
+
+.portada-slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.portada-slider img{
+    width: 100%;
+}
+
+@keyframes slider {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+/*MENU*/
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: #FF0000;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+}
+
+.menu{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.menu .list__links{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+}
+
+.menu .list__links .links{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 15px;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+}
+
+.menu .list__links .links:hover{
+    background-color: #F8A3C1;
+    color: #000000;
+}
+
+.toggle{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    color: #fff;
+    line-height: 50px;
+    font-size: 2rem;
+    position: absolute;
+    right: 0px;
+    display: none;
+}
+
+.container__ubicacion{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ubicacion{
+    text-align: center;
+}
+
+.ubicacion p{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.container__cultura,
+.container__religion,
+.container__gastronomia,
+.container__deportes{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cultura,
+.religion,
+.gastronomia{
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.cultura p,
+.religion p,
+.kimono p,
+.yukata p{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/*VESTIMENTA*/
+.container__vestimenta{
+    width: 90%;
+    height: auto;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.vestimenta{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.diferencias{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.kimono{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.yukata{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    align-items: center;
+}
+
+.img__kimono{
+    width: 150px;
+}
+
+.img__yukata{
+    width: 150px;
+}
+
+.platillos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+}
+
+.platillo{
+    width: 400px;
+    height: 200px;
+}
+
+.platillo__uno{
+    background-image: url(../img/tofu.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    width: 400px;
+    height: 200px;
+    cursor: pointer;
+}
+.platillo__uno:hover::after{
+    transform: translateY(0);
+}
+
+.platillo__uno::after{
+    content: 'Tofu: Alimento similar a un queso elaborado con leche de soya. Se sirve en gran variedad de platillos fríos y calientes.';
+    color: #fff;
+    background-color: #16456198;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.platillo__dos{
+    background-image: url(../img/Misoshiru.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    width: 400px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.platillo__dos:hover::after{
+    transform: translateY(0);
+}
+
+.platillo__dos::after{
+    content: 'Misoshiru o sopa miso: Sopa preparada a base de soya y caldo de pescado, a la que se agregan pequeños cuadros de tofu y alga wakame.';
+    color: #fff;
+    background-color: #16456198;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.platillo__tres{
+    background-image: url(../img/Edamame.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    width: 400px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.platillo__tres:hover::after{
+    transform: translateY(0);
+}
+
+.platillo__tres::after{
+    content: 'Edamame: Frijoles de soya cocidos en su vaina con sal, populares como aperitivos en bares y restaurantes.';
+    color: #fff;
+    background-color: #16456198;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.platillo__cuatro{
+    background-image: url(../img/Tsukemono.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    width: 400px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.platillo__cuatro:hover::after{
+    transform: translateY(0);
+}
+
+.platillo__cuatro::after{
+    content: 'Tsukemono: Verduras variadas encurtidas, consumidas como acompañamiento para el arroz y como botana.';
+    color: #fff;
+    background-color: #16456198;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+
+.platillo__cinco{
+    background-image: url(../img/algas.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    width: 400px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.platillo__cinco:hover::after{
+    transform: translateY(0);
+}
+
+.platillo__cinco::after{
+    content: 'Algas: Diversos tipos de algas se ocupan en diferentes platillos de la cocina japonesa.';
+    color: #fff;
+    background-color: #16456198;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.platillo__uno p,
+.platillo__dos p,
+.platillo__tres p,
+.platillo__cuatro p,
+.platillo__cinco p{
+    color: #fff;
+}
+
+.mensaje{
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.deportes{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.final{
+    margin-bottom: 5px;
+}
+
+.deporte{
+    font-weight: bold;
+}
+
+.templos__famosos{
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.templos{
+    background-color: #fff;
+    width: 350px;
+    margin: 10px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+}
+
+.contenido{
+    padding: 20px 30px;
+}
+
+.contenido p{
+    font-size: 15px;
+}
+
+.img__templo{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.slid__container{
+    width: 90%;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider{
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.slider__container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    gap: 1em;
+}
+
+.slider__body{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    transition: opacity 1.5s;
+}
+
+.slider__img{
+    width: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.slider__body--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.slider__arrow{
+    cursor: pointer;
+    width: 90%;
+}
+
+.slider__arrow:nth-of-type(2){
+    justify-self: end;
+}
+
+.titulo{
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.link__descarga{
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 6px 15px;
+    background-color: #05d616;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.ctn-lbl-comentar{
+    width: 100%;
+    text-align: center;
+}
+
+.lbl-comentar{
+    font-family: cursive;
+    font-size: 20px;
+    text-shadow: 1px 2px 1px rgb(241, 29, 29);
+}
+
+#button-up{
+    width: 50px;
+    height: 50px;
+    background-color: #FF0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all 300ms ease;
+    transform: scale(0);
+}
+
+#button-up:hover{
+    transform: scale(1.1);
+    border-color: rgba(0,0,0,.1);
+}
+
+.footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #363636;
+}
+
+.acercaDe{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.cta{
+    margin: auto;
+    background-color: #F8A3C1;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: .4em;
+    margin-top: 10px;
+}
+
+.copy{
+    font-weight: bold;
+    color: #fff;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.modal{
+    position: fixed;
+    background-color: hsla(0, 0%, 20%, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+
+    --opacity: 0;
+    --pointer: none;
+
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition:  opacity .5s;
+}
+
+.modal:target{
+    opacity: 1;
+    --pointer: unset;
+}
+
+.modal__container{
+    margin: auto;
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.4em 1.4em;
+    border-radius: 1em;
+}
+
+.modal:target .modal__container{
+    animation: show 1s .5s backwards;
+}
+
+.modal:target .modal__picture{
+    animation:  scale .5s 1.5s backwards;
+}
+
+@keyframes show{
+    0%{transform: translateY(-150vh);}
+}
+
+@keyframes scale{
+    0%{transform: scale(0);}
+}
+
+.cerrar__modal{
+    display: inline-block;
+    border: 1px solid;
+    padding: 10px 8px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #333;
+    border-radius: .4em;
+}
+
+.modal__container a{
+    text-decoration: none;
+    color: #0000ff;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 800px;
+	margin: auto;
+}
+
+@media screen and (max-width:800px){
+    .toggle{
+        display: block;
+        left: 0;
+    }
+
+    .menu{
+        display: inline-block;
+        background-color: #FF0000;
+        width: 200px;
+        height: 400px;
+        position: absolute;
+        top: 40px;
+        transform: translateX(-300px);
+        transition: all 1s;
+    }
+
+    .menu .list__links{
+        display: block;
+    }
+
+    .show{
+        transform: translateX(0px);
+    }
+
+    .img__ubicacion{
+        width: 280px;
+    }
+
+    .kimono,
+    .yukata{
+        display: block;
+    }
+
+    .platillos{
+        display: block;
+        text-align: center;
+    }
+
+    .platillo__uno,
+    .platillo__dos,
+    .platillo__tres,
+    .platillo__cuatro,
+    .platillo__cinco{
+        width: 100%;
+    }
+
+    .templos__famosos{
+        width: 100%;
+        display: block;
+    }
+
+    .templos{
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 320px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .img__ubicacion{
+        width: 200px;
+    }
+    .templos{
+        width: 250px;
+    }
+
+    .slid__container{
+        grid-template-columns: 25px 1fr 25px;
+    }
+
+    .slider__arrow{
+        width: 100%;
+    }
+
+    .slider__img{
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .slider__body{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+    }
+
+    .slider__picture{
+        grid-row: 1/2;
+    }
+
+    .slider__text{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .templos__famosos{
+        grid-template-columns: auto auto;
+    }
+}
